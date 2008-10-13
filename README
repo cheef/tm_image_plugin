@@ -1,0 +1,29 @@
+tm_image_plugin
+===============
+This TinyMCE plugin provides interface for adding users images, by url and with local file,
+nice working with attachment_fu and tiny_mce Rails plugins.
+
+Requires
+===============
+Worked with TinyMCE at least v.3.0.1
+
+Installation 
+===============
+with Rails attachment_fu:
+1) copy files in TinyMCE plugin dir ("public/javascripts/tiny_mce/plugins")
+2) in your tiny_mce config file ("configuration/initilizers/tiny_mce_plus_config.rb") add info about plugin, like this:
+AppConfig.my_mce_options = {
+    ... (there some you options)
+    :theme_advanced_buttons1 => %w{
+            oimage
+     },    
+    :plugins => %w{oimage},   
+    :extended_valid_elements => "img[src|class|style|alt|title|_new|align|width|height]"
+}
+
+Notes && TODOS
+===============
+- There are some bugs in localization, in en version, be carefull.
+
+
+Copyright (c) 2008 Ivan Garmatenko <cheef.che@gmail.com>, released under the MIT license

@@ -1,0 +1,74 @@
+/* CSS file for zimage plugin popup */
+
+.mceImageList {
+	width: 280px;
+}
+
+.mceActionPanel {
+	margin-top: 4px;
+}
+
+.alignPreview {
+	border: 1px solid black;
+	width: 140px;
+	height: 90px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+.checkbox {
+	border: 0;
+}
+
+.panel_wrapper div.current {
+	height: 60px;
+}
+
+#prev {
+	margin: 0;
+	border: 1px
+	solid black;
+	width: 99%;
+	height: 90px;
+	overflow: auto;
+}
+
+#align, #classlist {
+	width: 150px;
+}
+
+#width, #height {
+	vertical-align: middle;
+	width: 50px;
+	text-align: center;
+}
+
+#vspace, #hspace, #border {
+	vertical-align: middle;
+	width: 30px;
+	text-align: center;
+}
+
+#classlist {
+	width: 180px;
+}
+
+/*
+input {
+	width: 280px;
+}
+*/
+
+#constrain, #onmousemovecheck {
+	width: auto;
+}
+
+#id, #dir, #lang, #usemap, #longdesc {
+	width: 200px;
+}
+
+img.spinner {
+  float: left;
+  margin-left: 2px;
+  margin-top: 1px;
+}

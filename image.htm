@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Вставить / Изменить изображение</title>
+  <script src="/javascripts/prototype.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/mctabs.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/validate.js"></script>
+	<script language="javascript" type="text/javascript" src="js/functions.js"></script>
+	<link href="css/oimage.css" rel="stylesheet" type="text/css" />
+	<base target="_self" />
+</head>
+<body>
+		<div class="tabs">
+			<ul>
+				<li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#oimage_dlg.button_text}</a></span></li>
+			</ul>
+		</div>
+
+		<div class="panel_wrapper">
+			<div id="general_panel" class="panel current">
+			  <form action="/images" method="post" target="upload_frame" id="upload_form" style="display:inline" enctype="multipart/form-data" onsubmit="OImageDialog.update(); return false;">
+        <table class="properties">
+          <tr><td colspan="3">
+            <input type="radio" name="img_src_type" id="img_src_type_net"  onClick="OImageDialog.checkSrcType()" value="net" checked="checked"/><label for="img_src_type_net">{#oimage_dlg.type_net}</label>
+            <input type="radio" name="img_src_type" id="img_src_type_file" onClick="OImageDialog.checkSrcType()" value="file"/><label for="img_src_type_file">{#oimage_dlg.type_file}</label>
+          </tr>
+          <tr>
+            <td class="column1"><label id="srclabel" for="src">{#oimage_dlg.url}</label></td>
+            <td colspan="2">              
+              <input name="file" type="file" id="file" size="25" style="display:none" />          
+              <input name="src" type="text" id="src" value="" size="36" />              
+            </td>
+          </tr>
+          <tr>
+            <td class="column1"><label id="titlelabel" for="title">{#oimage_dlg.desc}</label></td>
+            <td colspan="2"><input id="title" name="title" type="text" value="" size="36" /></td>
+          </tr>
+        </table>
+        </form>
+			</div>
+    </div>
+
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="button" id="insert" name="insert" value="Вставить" onclick="OImageDialog.update();" />
+			</div>
+
+      <img src="/images/spinner.gif" id="spinner" class="spinner" style="display:none"/> 
+
+      <div style="float: right">
+				<input type="button" id="cancel" name="cancel" value="Отменить" onclick="tinyMCEPopup.close();" />
+			</div>
+		</div>
+
+    <iframe name="upload_frame" id="upload_frame" style="width: 0; height: 0; border: 0; padding: 0; margin: 0;"></iframe>
+
+</body> 
+</html> 
